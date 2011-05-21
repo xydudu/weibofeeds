@@ -11,6 +11,7 @@ var BlogPost = new Schema({
     body      : String, 
     date      : Date
 });
+mongoose.model('BlogPost', BlogPost);
 
 var myModel = mongoose.model('BlogPost');
 
