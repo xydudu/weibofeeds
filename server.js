@@ -17,8 +17,8 @@ var myModel = mongoose.model('BlogPost');
 
 var instance = new myModel();
 
-myModel.title = 'hello';
-myModel.save(function (err) {
+instance.title = 'hello';
+instance.save(function (err) {
   //
 });
 
