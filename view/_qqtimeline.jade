@@ -1,17 +1,17 @@
 li
-    | <a class="avatar" href="http://t.qq.com/#{qqtimeline.name}">
-    | <img src="#{qqtimeline.head}/50" 
+    | <a class="avatar" href="http://t.qq.com/#{status.name}">
+    | <img src="#{status.head}/50" 
     | width="50" height="50" />
     | </a>
-    | <a href="#{qqtimeline.name}" class="user" >
-    | #{qqtimeline.nick}</a> <br />
-    | !{qqtimeline.text}        
-    - if (qqtimeline.source)
+    | <a href="#{status.name}" class="user" >
+    | #{status.nick}</a> <br />
+    | !{status.text}        
+    - if (status.source)
         p
-            | <a href="http://t.qq.com/#{qqtimeline.source.name}">
-            | #{qqtimeline.source.nick}
+            | <a href="http://t.qq.com/#{status.source.name}">
+            | #{status.source.nick}
             | </a> ：
-            | !{qqtimeline.source.text}
+            | !{status.source.text}
 
-    - if (qqtimeline.image)
-        img(src=qqtimeline.image[0] +"/160", class="thumb")
+    - if (status.image)
+        img(src=status.image[0] +"/160", class="thumb")

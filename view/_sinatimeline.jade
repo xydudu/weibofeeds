@@ -1,17 +1,17 @@
 li
-    | <a class="avatar" href="#{sinatimeline.user.url}">
-    | <img src="#{sinatimeline.user.profile_image_url}" 
+    | <a class="avatar" href="#{status.user.url}">
+    | <img src="#{status.user.profile_image_url}" 
     | width="50" height="50" />
     | </a>
-    | <a href="#{sinatimeline.user.url}" class="user" >
-    | #{sinatimeline.user.screen_name}</a> <br />
-    | #{sinatimeline.text}        
-    - if (sinatimeline.retweeted_status)
+    | <a href="#{status.user.url}" class="user" >
+    | #{status.user.screen_name}</a> <br />
+    | #{status.text}        
+    - if (status.retweeted_status)
         p
-            | <a href="#{sinatimeline.retweeted_status.user.url}">
-            | #{sinatimeline.retweeted_status.user.screen_name}
+            | <a href="#{status.retweeted_status.user.url}">
+            | #{status.retweeted_status.user.screen_name}
             | </a> ：
-            | #{sinatimeline.retweeted_status.text}
+            | #{status.retweeted_status.text}
 
-    - if (sinatimeline.thumbnail_pic)
-        img(src=sinatimeline.thumbnail_pic, class="thumb")
+    - if (status.thumbnail_pic)
+        img(src=status.thumbnail_pic, class="thumb")
