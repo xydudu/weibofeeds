@@ -3,7 +3,7 @@ var express = require('express'),
     sys = require('sys'),
     tqq = require('./qqoauth').qq;
     tsina = require('./sinaoauth').sina,
-    site = 'http://lab.local:3000';
+    site = 'http://xydudu.no.de';
 
 
 app.use(express.bodyParser());
