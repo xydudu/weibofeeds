@@ -2,7 +2,8 @@ var express = require('express'),
 	app = express.createServer(),
     sys = require('sys'),
     tqq = require('./qqoauth').qq;
-    tsina = require('./sinaoauth').sina;
+    tsina = require('./sinaoauth').sina,
+    site = 'http://lab.local:3000';
 
 
 app.use(express.bodyParser());
@@ -115,7 +116,7 @@ app.get('/oauth_sina', function(req, res){
         });
 
     } else 
-        tsina.getRequestToken('http://lab.local:3000/oauth_sina', function($data) {
+        tsina.getRequestToken(site +'/oauth_sina', function($data) {
 
             req.session.oauth_token = $data.oauth_token;
             req.session.oauth_token_secret = $data.oauth_token_secret; 
@@ -136,7 +137,7 @@ app.get('/oauth', function(req, res){
         });
 
     } else 
-        tqq.getRequestToken('http://lab.local:3000/oauth', function($data) {
+        tqq.getRequestToken(site +'/oauth', function($data) {
 
             req.session.oauth_token = $data.oauth_token;
             req.session.oauth_token_secret = $data.oauth_token_secret; 
