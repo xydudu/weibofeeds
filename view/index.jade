@@ -1,0 +1,12 @@
+#box
+    h1 My Feeds
+        - if (!qq)
+            | <a href="/oauth">GO QQ</a> 
+        - if (!sina)
+            | <a href="/oauth_sina">GO SINA</a>
+
+    ul
+        - if (sina)
+            != partial('sinatimeline', sina)
+        - if (qq)
+            != partial('qqtimeline', qq)

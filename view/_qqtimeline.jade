@@ -1,0 +1,17 @@
+li
+    | <a class="avatar" href="http://t.qq.com/#{qqtimeline.name}">
+    | <img src="#{qqtimeline.head}/50" 
+    | width="50" height="50" />
+    | </a>
+    | <a href="#{qqtimeline.name}" class="user" >
+    | ${qqtimeline.nick}</a> <br />
+    | !{qqtimeline.text}        
+    - if (qqtimeline.source)
+        p
+            | <a href="http://t.qq.com/#{qqtimeline.source.name}">
+            | #{qqtimeline.source.nick}
+            | </a> ：
+            | !{qqtimeline.source.text}
+
+    - if (qqtimeline.image)
+        img(src=qqtimeline.image[0] +"/160", class="thumb")
