@@ -7,6 +7,6 @@
 
     ul
         - if (sina)
-            != partial('sinatimeline', {collection: sina, as: status})
+            != partial('sinatimeline', {collection: sina, as: 'status'})
         - if (qq)
-            != partial('qqtimeline', {collection: qq, as: status})
+            != partial('qqtimeline', {collection: qq, as: 'status'})
